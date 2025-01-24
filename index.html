@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management system</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+IN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        .school_log {
+            /* display: inline-block; */
+            background:linear-gradient(25deg,#3400ff,#fff);
+            width:500px;
+            border: none;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        .school_log img{
+            position: relative;
+            top: 30px;
+            left: 80px;
+            width: 100px;
+            background-color: none;
+            /* margin-left: -275px; */
+            border-radius: 20px;
+        }
+         .school_log h1 {
+            color: white;
+            font-family: 'Poppins',sans-serif;
+            position: relative;
+            bottom: 50px;
+            left: 200px;
+            transition: all 0.3s ease-in-out;
+         }
+         .school_log h1:hover {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+
+         }
+        body {
+            background: #f4f7fc url(./stellrweb-djb1whucfBY-unsplash.jpg) no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+
+        .container {
+            /* height: 600px; */
+            max-width: 700px;
+            width: 90%;
+            background:linear-gradient(25deg,#3400ff,#fff);
+            padding: 25px 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            margin: 20px;
+        }
+
+        .container .title {
+            font-size: 25px;
+            font-weight: 500;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .user-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: space-between;
+        }
+
+        .input-box {
+            flex: 1 1 calc(50% - 10px);
+            min-width: 250px;
+        }
+
+        .input-box img {
+            background-color: #3400ff;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            top: -30px;
+            left: 440px;
+            /* display: inline-block; */
+            color: blueviolet;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .input-box input {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            transition: all 0.3s ease;
+        }
+
+        .input-box input:focus,
+        .input-box input:valid {
+            border-color: #9b59b6;
+        }
+
+        .button {
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .button a {
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            height: 45px; 
+            width: 100%;
+             max-width: 300px;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #111ba4, #5721fb);
+            margin-top: 10px;
+        }
+
+        .button a:hover {
+            background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: none;
+        }
+
+        .popup button {
+            background-color: #f346ed;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-family: 'Roboto', sans-serif;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            transition: background 0.3s;
+        }
+
+        .popup button:hover {
+            background-color: #d12fb2;
+        }
+
+        @media(max-width: 768px) {
+            .school_log img{
+            width: 100px;
+            background-color: none;
+        }
+            .user-details {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .input-box {
+                flex: 1 1 100%;
+            }
+            .input-box img {
+            background-color: #3400ff;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            top: -30px;
+            left: 440px;
+            /* display: inline-block; */
+            color: blueviolet;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        }
+
+        @media(max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            .container .title {
+                font-size: 22px;
+            }
+
+            .button a {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="school_log">
+        <img src="./RCA.png" alt="School Log">
+        <h1>RCA</h1>
+    </div>
+<div class="container">
+    <div class="title">Accountant Sign In</div>
+    <form action="#" method="post">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details"></span>
+                <input type="text" placeholder="Enter your username" required name="username">
+                <img src="./account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" width="20px">
+            </div>
+            <div class="input-box">
+                <span class="details"></span>
+                <input type="email" placeholder="Enter your email" required name="email">
+                <img src="./mail_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" width="20px">
+            </div>
+            <div class="input-box">
+                <span class="details"></span>
+                <input type="password" placeholder="Enter your password" required name="password">
+                <img src="./lock_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" width="20px">
+                <a href="mailto:isaprecieux112@gmail.com" style="position: relative;left: -20px;color: white;text-decoration: none;">Forgot password</a>
+            </div>
+            <div class="input-box">
+                <span class="details"></span>
+                <input type="text" placeholder="Enter your phone number" required name="phone_number">
+               <img src="./call_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" width="20px">
+            </div>
+        </div>
+        <div class="button">
+            <a href="./after_login.html">Sign in</a>
+        </div>
+    </form>
+</div>
+
+<div class="popup" id="popup">
+    <span id="popup-message"></span>
+    <button onclick="hidePopup()">Close</button>
+</div>
+<div class="pop_up">
+
+</div>
+<script>
+    function showPopup(message) {
+        document.getElementById('popup-message').innerText = message;
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function hidePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Students</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background:linear-gradient(135deg, #111ba4, #5721fb);
+            color: white;
+        }
+
+        td {
+            background-color: #fff;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .empty-row td {
+            background-color: #f9f9f9;
+            color: #bbb;
+        }
+
+        .remaining {
+            color: red;
+            font-weight: bold;
+        }
+        table {
+            border-collapse: separate;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>List of Students</caption>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Class</th>
+            <th>First term</th>
+            <th>Second term</th>
+            <th>Last term</th>
+            <th>Remaining First term</th>
+            <th>Remaining Second term</th>
+            <th>Remaining Last term</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>S1 A</td>
+            <td>75,000Frw</td>
+            <td>80,000Frw</td>
+            <td>90,000Frw</td>
+            <td class="remaining">30,000Frw</td>
+            <td class="remaining">10,000Frw</td>
+            <td class="remaining">5,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Jane</td>
+            <td>Smith</td>
+            <td>S1 B</td>
+            <td>60,000Frw</td>
+            <td>85,000Frw</td>
+            <td>92,000Frw</td>
+            <td class="remaining">15,000Frw</td>
+            <td class="remaining">7,000Frw</td>
+            <td class="remaining">3,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Michael</td>
+            <td>Johnson</td>
+            <td>S2 A</td>
+            <td>80,000Frw</td>
+            <td>90,000Frw</td>
+            <td>100,000Frw</td>
+            <td class="remaining">20,000Frw</td>
+            <td class="remaining">5,000Frw</td>
+            <td class="remaining">0</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Emily</td>
+            <td>Williams</td>
+            <td>S2 B</td>
+            <td>70,000Frw</td>
+            <td>75,000Frw</td>
+            <td>88,000Frw</td>
+            <td class="remaining">10,000Frw</td>
+            <td class="remaining">3,000Frw</td>
+            <td class="remaining">2,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>David</td>
+            <td>Brown</td>
+            <td>S3 A</td>
+            <td>65,000Frw</td>
+            <td>80,000Frw</td>
+            <td>85,000Frw</td>
+            <td class="remaining">25,000Frw</td>
+            <td class="remaining">5,000Frw</td>
+            <td class="remaining">10,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Sarah</td>
+            <td>Miller</td>
+            <td>S3 B</td>
+            <td>90,000Frw</td>
+            <td>95,000Frw</td>
+            <td>105,000Frw</td>
+            <td class="remaining">0</td>
+            <td class="remaining">0</td>
+            <td class="remaining">0</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Chris</td>
+            <td>Lee</td>
+            <td>S4 A</td>
+            <td>78,000Frw</td>
+            <td>85,000Frw</td>
+            <td>93,000Frw</td>
+            <td class="remaining">18,000Frw</td>
+            <td class="remaining">3,000Frw</td>
+            <td class="remaining">2,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Amy</td>
+            <td>Garcia</td>
+            <td>S4 B</td>
+            <td>68,000Frw</td>
+            <td>82,000Frw</td>
+            <td>91,000Frw</td>
+            <td class="remaining">22,000Frw</td>
+            <td class="remaining">6,000Frw</td>
+            <td class="remaining">4,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Robert</td>
+            <td>Martinez</td>
+            <td>S1 B</td>
+            <td>8,500Frw</td>
+            <td>90,000Frw</td>
+            <td>100,000Frw</td>
+            <td class="remaining">15,000Frw</td>
+            <td class="remaining">4,000Frw</td>
+            <td class="remaining">2,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Ange</td>
+            <td>Mukundwa</td>
+            <td>S5 A</td>
+            <td>85,000Frw</td>
+            <td>90,000Frw</td>
+            <td>100,000Frw</td>
+            <td class="remaining">15,000Frw</td>
+            <td class="remaining">4,000Frw</td>
+            <td class="remaining">2,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Rugwiro</td>
+            <td>Ninah</td>
+            <td>S5 A</td>
+            <td>85,000Frw</td>
+            <td>90,000Frw</td>
+            <td>100,000Frw</td>
+            <td class="remaining">15,000Frw</td>
+            <td class="remaining">4,000Frw</td>
+            <td class="remaining">2,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Kevin</td>
+            <td>Yanis</td>
+            <td>S1 C</td>
+            <td>85,000Frw</td>
+            <td>90,000Frw</td>
+            <td>100,000Frw</td>
+            <td class="remaining">15,000Frw</td>
+            <td class="remaining">4,000Frw</td>
+            <td class="remaining">2,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Byiringiro</td>
+            <td>Aloys</td>
+            <td>S1 B</td>
+            <td>85,000Frw</td>
+            <td>90,000Frw</td>
+            <td>100,000Frw</td>
+            <td class="remaining">15,000Frw</td>
+            <td class="remaining">4,000Frw</td>
+            <td class="remaining">2,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Robert</td>
+            <td>Martinez</td>
+            <td>S5 A</td>
+            <td>85,000Frw</td>
+            <td>90,000Frw</td>
+            <td>100,000Frw</td>
+            <td class="remaining">15,000Frw</td>
+            <td class="remaining">4,000Frw</td>
+            <td class="remaining">2,000Frw</td>
+        </tr>
+        <tr class="empty-row">
+            <td>Robert</td>
+            <td>Martinez</td>
+            <td>S5 A</td>
+            <td>85,000Frw</td>
+            <td>90,000Frw</td>
+            <td>100,000Frw</td>
+            <td class="remaining">15,000Frw</td>
+            <td class="remaining">4,000Frw</td>
+            <td class="remaining">2,000Frw</td>
+        </tr>
+    </table>
+</body>
+</html>

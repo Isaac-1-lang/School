@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Lists</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+        * {
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            background: #f4f7fc url(
+                ./Why\ Should\ You\ Have\ An\ Accountant\ For\ Your\ Small\ Business_.jpg
+            ) no-repeat center center/cover;
+        }
+
+        header, footer {
+            color: black;
+            width: 100%;
+            /* background-color: #131e2e; */
+            color:#5721fb;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            height: 150px;
+            width: 600px;
+            color: white;
+            background:linear-gradient(135deg, #111ba4, #5721fb);
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.1);
+            background-color: #324a6c;
+        }
+
+        .container h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                height: 120px;
+                width: 100%;
+            }
+
+            .container h1 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                height: 100px;
+                width: 100%;
+            }
+
+            .container h1 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Financial Management</h1>
+    </header>
+    <div class="container">
+        <h1><a href="./s1.html" style="text-decoration: none;color: white;">Senior 1</a></h1>
+    </div>
+    <div class="container">
+        <h1><a href="./s2.html" style="text-decoration: none;color: white;">Senior 2</a></h1>
+    </div>
+    <div class="container">
+        <h1><a href="./s3.html" style="text-decoration: none;color: white;">Senior 3</a></h1>
+    </div>
+    <div class="container">
+        <h1><a href="./s4.html" style="text-decoration: none;color: white;">Senior 4</a></h1>
+    </div>
+    <div class="container">
+        <h1><a href="./s5.html" style="text-decoration: none;color: white;">Senior 5</a></h1>
+    </div>
+    <div class="container">
+        <h1><a href="./s6.html" style="text-decoration: none;color: white;">Senior 6</a></h1>
+    </div>
+</body>
+</html>
